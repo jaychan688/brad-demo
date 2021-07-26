@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="wrapper">
+      <div class="site-header__logo">
+        <img src="../images/clear-view-escapes.svg" />
+      </div>
+      <div class="site-header__menu-icon">
+        <div class="site-header__menu-icon--middle"></div>
+      </div>
+      <div class="site-header__menu-content">
+        <div class="site-header__btn-container">
+          <a class="btn open-modal" href="#">Get in Touch</a>
+        </div>
+        <nav class="primary-nav primary-nav--pull-right">
+          <ul>
+            <li>
+              <a href="#our-beginning" id="our-beginning-link">Our Beginning</a>
+            </li>
+            <li><a href="#features" id="features-link">Features</a></li>
+            <li>
+              <a href="#testimonials" id="testimonials-link">Testimonials</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="large-hero">
+    <!-- Art direction & Cropping situation -->
+    <!-- Resolution switching & file size situation -->
+    <picture>
+      <source media="(min-width: 1380px)"
+        srcset="../images/hero--large.jpg 1920w, ../images/hero--large-hi-dpi.jpg 3840w" />
+      <source media="(min-width: 990px)" srcset="
+				../images/hero--medium.jpg        1380w,
+				../images/hero--medium-hi-dpi.jpg 2760w
+			" />
+      <source media="(min-width: 640px)"
+        srcset="../images/hero--small.jpg 990w, ../images/hero--small-hi-dpi.jpg 1980w" />
+      <img class="large-hero__image" srcset="
+				../images/hero--smaller.jpg         640w,
+				../images/hero--smaller-hi-dpi.jpg 1280w
+			" alt="Coastal view of ocean and mountains" />
+    </picture>
+    <div class="large-hero__text-content">
+      <div class="wrapper">
+        <h1 class="large-hero__title">Your clarity.</h1>
+        <h2 class="large-hero__subtitle">One trip away.</h2>
+        <p class="large-hero__description">
+          We create soul restoring journeys that inspire you to be you.
+        </p>
+        <p>
+          <a class="btn btn--orange btn--large open-modal" href="#">Get Started Today</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- data-any-name: custom attribute  -->
+  <section class="page-section empty-block empty-block--green" data-matching-link="#our-beginning-link"
+    id="our-beginning">
+    <div class="wrapper">
+      <div class="empty-block__element empty-block--100vh">
+        <p>Mimic Begining Section</p>
+        <p>Every section have page-section class</p>
+        <p>Each section have different data-matching-link custom attribute</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section empty-block empty-block--red" data-matching-link="#features-link" id="features">
+    <div class="wrapper">
+      <div class="empty-block__element empty-block--100vh">
+        <p>Mimic Features Section</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section empty-block empty-block--orange" data-matching-link="#testimonials-link"
+    id="testimonials">
+    <div class="wrapper">
+      <div class="empty-block__element empty-block--100vh">
+        <p>Mimic Testimonials Section</p>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

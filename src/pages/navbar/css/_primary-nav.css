@@ -1,0 +1,142 @@
+/* Primary-nav */
+.primary-nav {
+	padding-top: 1rem;
+
+	@mixin md {
+		/* Don't need vertcal gap in medium screen */
+		padding-top: 0;
+	}
+
+	&--pull-right {
+		@mixin md {
+			/* on medium screen, pull the <nav> to the right */
+			float: right;
+		}
+	}
+
+	/* Break the BEM rules, The same reason with generic-container-container */
+	ul {
+		margin: 0;
+		padding: 0;
+		@mixin clearfix;
+	}
+
+	li {
+		list-style: none;
+		/* inline-block make <ii> to align in a row  */
+		display: inline-block;
+		padding-right: 7px;
+
+		@mixin md {
+			/* float, display make all list-item move left and in one line, 
+			padding-right to add horizontal spaceing between each of these links*/
+			padding-right: 20px;
+			float: left;
+			display: block;
+		}
+	}
+
+	li:last-child {
+		/* Small screen don't need the space in the last element */
+		padding-right: 0;
+
+		@mixin md {
+			/* Medium screen need padding-right on the last <li> */
+			padding-right: 20px;
+		}
+	}
+
+	a {
+		font-weight: 300;
+		color: #fff;
+		text-decoration: none;
+		display: block;
+		/* Add padding to align the links */
+		padding: 10px 12px;
+		font-size: 1.6rem;
+		background-color: rgba(var(--color-blue), 0.8);
+		border-radius: 10px;
+
+		@mixin md {
+			font-size: 1.6rem;
+			padding: 12px 0;
+			background-color: transparent;
+
+			&.is-current-link {
+				color: #fabb69;
+			}
+		}
+	}
+}
+
+/* Large Hero */
+.large-hero {
+	position: relative;
+	border-bottom: 10px solid $mainBlue;
+
+	&__image {
+		/* 
+		1.The default img element dispaly property is inline,
+			browser thinks image is similar to a line of text.
+			it wants to leave a little of room for the bottom 
+			part of certain letter to hang blew to rule, like g or y.
+			change to block and treat it as a block, without worrying
+			about leaving any room for bottom parts of letters,
+			fix the gap problem 
+		2.The class have to apply to <img>, not <picture>
+		 */
+		display: block;
+	}
+
+	&__text-content {
+		/* Center content vertically */
+		position: absolute;
+		top: 50%;
+		left: 0;
+		/* 
+			site-header position:absolute, out of normal flow
+			add padding-top:60px make text-content keep vertical center. 
+		 */
+		padding-top: 60px;
+		transform: translateY(-50%);
+		/* Center in-line box horizontally */
+		width: 100%;
+		text-align: center;
+	}
+
+	&__title {
+		font-weight: 300;
+		color: $mainBlue;
+		font-size: 2.4rem;
+		margin: 0;
+
+		@mixin sm {
+			font-size: 4.8rem;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 300;
+		color: $mainBlue;
+		font-size: 1.5rem;
+		margin: 0;
+
+		@mixin sm {
+			font-size: 2.9rem;
+		}
+	}
+
+	&__description {
+		color: #fff;
+		font-size: 1.1rem;
+		font-weight: 100;
+		text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+		max-width: 30rem;
+		margin-left: auto;
+		margin-right: auto;
+
+		@mixin sm {
+			font-size: 1.875rem;
+		}
+	}
+}

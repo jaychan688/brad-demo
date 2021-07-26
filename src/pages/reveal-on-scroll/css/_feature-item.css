@@ -1,0 +1,74 @@
+/* Using Position and padding to implement the two-column layout */
+.feature-item {
+	position: relative;
+	padding-bottom: 2.5rem;
+
+	@mixin sm {
+		padding-left: 94px;
+	}
+
+	&__icon {
+		display: block;
+		margin: 0 auto;
+
+		@mixin sm {
+			position: absolute;
+			left: 0;
+		}
+	}
+
+	&__title {
+		font-size: 2.3rem;
+		font-weight: 500;
+		text-align: center;
+		margin-top: 0.7rem;
+		margin-bottom: 0.8rem;
+
+		@mixin sm {
+			text-align: left;
+			margin-top: 1rem;
+		}
+	}
+}
+
+/* Section title */
+.section-title {
+	font-size: 3rem;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 5rem;
+
+	@mixin sm {
+		font-size: 4rem;
+	}
+
+	strong {
+		font-weight: 500;
+	}
+
+	&__icon {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 0.6rem;
+
+		@mixin sm {
+			display: inline-block;
+			/* Moveing icon down about 8px */
+			position: relative;
+			top: 8px;
+			margin-right: 0.5rem;
+			margin-left: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	&--blue {
+		color: $mainBlue;
+	}
+
+	&--less-margin {
+		margin-bottom: 1.3rem;
+		margin-top: 0;
+	}
+}

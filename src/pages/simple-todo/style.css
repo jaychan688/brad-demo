@@ -1,0 +1,75 @@
+:root {
+	--border-radius: 30px;
+	--color-accent: #ff3400;
+	--color-body: #918ca4;
+	--color-body-darker: #5c5577;
+	--color-border: #cccccc;
+	--color-headings: #1b0760;
+	--color-primary: #2584ff;
+	--color-secondary: #00d9ff;
+}
+
+.todo {
+	margin: 0 auto;
+	width: 40%;
+
+	&__title {
+		margin: 0;
+		margin-bottom: 10px;
+		padding: 1rem;
+		color: var(--color-headings);
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	&__list {
+		padding-left: 0;
+		color: var(--color-headings);
+		list-style: none;
+		font-size: 1.6rem;
+
+		li {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 5px;
+		}
+
+		span {
+			display: block;
+			align-self: center;
+		}
+
+		button {
+			padding: 0.5rem;
+			border: 0;
+			border-radius: 10px;
+			background-color: var(--color-accent);
+			font-size: 1.4rem;
+			cursor: pointer;
+		}
+	}
+}
+
+/* Form */
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	input {
+		padding: 0.6rem;
+		outline: 0;
+		border: 0;
+		border: 1px solid var(--color-secondary);
+		font-size: 1.4rem;
+	}
+
+	button {
+		padding: 0.5rem;
+		border: 0;
+		border-radius: 10px;
+		background-color: var(--color-primary);
+		font-size: 1.4rem;
+		cursor: pointer;
+	}
+}

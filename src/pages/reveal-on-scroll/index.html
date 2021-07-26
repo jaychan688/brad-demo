@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- FEATURE SECTION -->
+  <section class="page-section empty-block empty-block--sky" data-matching-link="#our-beginning-link">
+    <div class="wrapper">
+      <div class="empty-block__element empty-block--40vh empty-block__element--mt">
+        <p>40% of view hight</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section empty-block empty-block--orange" data-matching-link="#our-beginning-link">
+    <div class="wrapper">
+      <div class="empty-block__element empty-block--60vh empty-block__element--mt">
+        <p>60% of view hight</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="page-section page-section--blue" data-matching-link="#features-link">
+    <div class="wrapper">
+      <h2 class="section-title">
+        <img class="section-title__icon" src="../images/icons/star.svg" />
+        Our<strong>Features</strong>
+      </h2>
+      <!-- 為了要讓左右兩邊的高度一致，分別實作了兩個 1 row 2 column -->
+      <!-- A row of two column block: 6 6 split -->
+      <div class="row row--gutters-large generic-content-container">
+        <!-- 6 of 12 column grid bars -->
+        <div class="row__medium-6">
+          <article class="feature-item">
+            <img class="feature-item__icon" src="../images/icons/rain.svg" />
+            <h3 class="feature-item__title">觸發 Event 條件</h3>
+            <p>
+              觸發scroll event 設定是從頁面最頂端到 feature-item
+              的高度達到目前頁面的 75%
+              ，上方區域為60%，再加上現在出現在頁面上的15%,及達到觸發條件。
+            </p>
+            <p>article.feature-item > img + h3</p>
+          </article>
+        </div>
+        <!-- 6 of 12 column grid bars -->
+        <div class="row__medium-6">
+          <article class="feature-item">
+            <img class="feature-item__icon" src="../images/icons/wifi.svg" />
+            <h3 class="feature-item__title">如何計算</h3>
+            <p>
+              element.getBoundingClientRect().y -
+              頁面最上端到element的距離，隨著滑鼠滾動而改變。
+            </p>
+            <p>window.innerHeight - 目前頁面的高度，隨著 resize 而改變。</p>
+            <p>
+              (el.getBoundingClientRect().y / window.innerHeight) * 100 -
+              計算出百分比
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <!-- A row of two column block: 6 6 split -->
+      <div class="row row--gutters-large generic-content-container">
+        <!-- 6 of 12 column grid bars -->
+        <div class="row__medium-6">
+          <article class="feature-item">
+            <img class="feature-item__icon" src="../images/icons/globe.svg" />
+            <h3 class="feature-item__title">Lodash function</h3>
+            <p>_.throttle(func, [wait=0], [options={}]) : 節流閥</p>
+            <p>_.debounce(func, [wait=0], [options={}]) : 防抖動或防反動都行</p>
+            <p>
+              First argument is the function you want to run
+              Second argument is how much millsecond you want have to wait
+              until the function run again.
+              bind(this) means
+            </p>
+
+          </article>
+        </div>
+        <!-- 6 of 12 column grid bars -->
+        <div class="row__medium-6">
+          <article class="feature-item">
+            <img class="feature-item__icon" src="../images/icons/fire.svg" />
+            <h3 class="feature-item__title">名詞解釋</h3>
+            <p>
+              <strong>Window.scrollY</strong>: returns the number of pixels that the document is currently
+              scrolled vertically.
+            </p>
+            <p>
+              <strong>Window.innerHeight</strong>: returns the interior height of the window in pixels,
+              including the height of the horizontal scroll bar, if present.
+            </p>
+            <p>
+              <strong>HTMLElement.offsetTop</strong>: returns the distance of the outer border of the
+              current element relative to the inner border of the top of the offsetParent node.
+            </p>
+            <p><strong>Element.getBoundingClientRect()</strong>: returns a DOMRect object providing
+              information about the size of an element and its position relative to the viewport.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
