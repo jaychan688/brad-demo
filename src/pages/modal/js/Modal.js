@@ -47,7 +47,7 @@ export default class Modal {
 			<div class="modal__inner">
 				<h2 class="section-title section-title--blue section-title--less-margin">
 					<img src="../images/icons/mail.svg" class="section-title__icon" />
-					Get in <strong>Touch</strong>
+					保持接觸
 				</h2>
 				<div class="wrapper wrapper--narrow">
 					<p class="modal__description">
