@@ -61,11 +61,10 @@ if (!isProduction) {
 	}
 
 	config.devServer = {
-		// Middleware:  html auto reload - full page reload
-		before: (app, server) => {
-			server._watch('./src/**/*.html')
+		watchFiles: ['./src/**/*.html'],
+		static: {
+			directory: path.join(__dirname, 'dist'),
 		},
-		contentBase: path.join(__dirname, 'dist'),
 		hot: true,
 		port: 3000,
 		historyApiFallback: true,

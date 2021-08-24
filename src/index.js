@@ -1,12 +1,6 @@
 import './index.css'
 
-const components = [
-	'mosh-navbar',
-	'brad-navbar',
-	'reveal-on-scroll',
-	'modal',
-	'simple-todo',
-]
+const components = ['modal', 'navbar', 'reveal-on-scroll', 'simple-todo']
 
 const componentsLinks = components
 	.map(
